@@ -29,6 +29,7 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
         else:
             print("Unknow Task :",end=' ')
             print(Data)
+        self.request.sendall(bytes("Received"))
     
     
     def handle(self):
